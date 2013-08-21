@@ -105,6 +105,27 @@ GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
 AutoPlay_1();
 }
 
-
-
-
+function scroll(wraper,children,speed,type)
+{
+	var wrap = $(wraper);
+	var sc = function(){
+		var item = $(children).eq(0);
+		var object1,object2;
+		if(type)
+		{
+			object1 = {'marginTop':'-'+item.outerHeight(true)};
+			object2 = {'marginTop':item.css('marginTop')};
+		}	
+		else
+		{
+			object1 = {'marginLeft':'-'+item.outerWidth(true)};
+			object2 = {'marginLeft':item.css('marginLeft')};
+		}	
+		item.animate(object1,speed,function(){
+			$(this).css(object2);
+			$(this).parent().append($(this).remove());	
+		});
+	}
+	var st = setInterval(sc,speed+500);
+	wrap.hover(function(){clearInterval(st);},function(){st = setInterval(sc,speed+500)});
+}

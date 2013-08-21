@@ -1,78 +1,42 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>泉州体育网</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<link href="__PUBLIC__/index/css/index.css" type="text/css" rel="stylesheet" />
-<script src="__PUBLIC__/index/js/common.js" type="text/javascript"></script>
-<script language="javascript" type="text/javascript" src="__PUBLIC__/index/js/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-	
-	//选项卡鼠标滑过事件
-	$('#statetab .tabbtn li').mouseover(function(){
-		TabSelect("#statetab .tabbtn li", "#statetab .tabcon", "current", $(this))
-	});
-	$('#statetab .tabbtn li').eq(0).trigger("mouseover");
-	
-	//选项卡鼠标滑过事件
-	$('#clicktab .tabbtn li').click(function(){
-		TabSelect("#clicktab .tabbtn li", "#clicktab .tabcon", "current", $(this))
-	});
-	$('#clicktab .tabbtn li').eq(0).trigger("click");
-
-	function TabSelect(tab,con,addClass,obj){
-		var $_self = obj;
-		var $_nav = $(tab);
-		$_nav.removeClass(addClass),
-		$_self.addClass(addClass);
-		var $_index = $_nav.index($_self);
-		var $_con = $(con);
-		$_con.hide(),
-		$_con.eq($_index).show();
-	}
-	
-});
-</script>
-<title>泉州体育网</title>
-</head>
-<body>
-<div id="wrap">
-	<div class="head">
-		<p><span class="user">用户名：<input name="" type="text" class="input" /></span><span class="user">密码：<input name="" type="text" class="input" /></span></p>
-		<p><input name="" type="button" class="dl_btn" value="登录" /></p>
-		<p class="zc"><a href="#">免费注册</a> |</p>
-		<p class="password"><a href="#">忘记密码</a></p>
-		<span class="span"><a href="#">加入收藏</a> | <a href="#">设为首页</a></span>
-	</div>
-	<div class="head_img"><p><img src="__PUBLIC__/index/images/logo.gif" border="0" alt="" /></p><p><img src="__PUBLIC__/index/images/banner.jpg" border="0" alt="" /></p></div>
-	<!--导航条开始-->
-	<div class="head_banner">
-		<ul>
-		<li class="cd_0-off" id="menu0" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">网站首页</li>
-		<li class="cd_0-off" id="menu1" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">精英团队</li>
-		<li class="cd_0-off" id="menu2" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">体育新闻</li>
-		<li class="cd_0-off" id="menu3" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">动感体育</li>
-		<li class="cd_0-off" id="menu4" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">市场资讯</li>
-		<li class="cd_0-off" id="menu5" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">特邀评论</li>
-		<li class="cd_0-off" id="menu6" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">论坛</li>
-		<li class="cd_0-off" id="menu7" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">公告/预告</li>
-		<li class="cd_0-off" id="menu8" onClick="registMenu(this);window.open('#','_blank')" onMouseOver="overMenu(this)" onMouseOut="outMenu(this)" status="off">商城</li>
-		</ul>
-	</div>
-	<!--导航条结束-->
-	<!--最新资讯开始-->
-	<div class="news">
-	 <marquee scrollamount=2 direction=up  align="up" style="height:23px;" onmouseover="this.stop()"  onmouseout="this.start()">
-		<ul>
-		<li>“侨兴杯”公开赛助力蛇年春节</li>
-		<li>全国篮球锦标赛北大泉州附中获中亚军</li>
-		<li>SM村级篮球争霸赛程序</li>
-		</ul>
-	</marquee>
-	</div>
-	<!--最新资讯结束-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="__PUBLIC__/index/css/index.css" type="text/css" rel="stylesheet" />
+    <script src="__PUBLIC__/index/js/common.js" type="text/javascript"></script>
+    <script language="javascript" type="text/javascript" src="__PUBLIC__/index/js/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+	  //选项卡鼠标滑过事件
+	  $('#statetab .tabbtn li').mouseover(function(){
+	    TabSelect("#statetab .tabbtn li", "#statetab .tabcon", "current", $(this))
+	    });
+	  $('#statetab .tabbtn li').eq(0).trigger("mouseover");
+	  //选项卡鼠标滑过事件
+	  $('#clicktab .tabbtn li').click(function(){
+	    TabSelect("#clicktab .tabbtn li", "#clicktab .tabcon", "current", $(this))
+	    });
+	  $('#clicktab .tabbtn li').eq(0).trigger("click");
+	  function TabSelect(tab,con,addClass,obj){
+	  var $_self = obj;
+	  var $_nav = $(tab);
+	  $_nav.removeClass(addClass),
+	  $_self.addClass(addClass);
+	  var $_index = $_nav.index($_self);
+	  var $_con = $(con);
+	  $_con.hide(),
+	  $_con.eq($_index).show();
+	  }
+	  scroll('.dt_txt','.dt_txt ul li',2000,true);
+	  scroll('.mate','.mate ul li',2000,false);
+      });
+    </script>
+    <title>泉州体育网</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <include file="Index:header" />
 	<div class="story">
 		<ul>
 		<li>
@@ -172,20 +136,24 @@ $(function(){
 		<li class="line"></li>
 		<!--今日要闻开始-->
 		<li class="today_news">
-			<p class="today_news_title">今日要闻</p>
+			<p class="today_news_title"><span>Latest Headlines</span>今日要闻</p>
 			<div class="today_news_txt">
 			<ul>
-			<li><span><a href="#">“侨兴杯”公开赛助力蛇年春晚</a></span></li>
-			<li><a href="#">黄飞鸿徒孙 泉州少林寺认祖</a></li>
-			<li><a href="#">全国篮球锦标赛北大泉州附中获亚军与争锋</a></li>
-			<li><span><a href="#">SM村级篮球争霸赛程序</a></span></li>
-			<li><a href="#">“侨兴杯”公开赛助力蛇年春节</a></li>
-			<li><a href="#">全国篮球锦标赛北大泉州附中获亚军</a></li>
-			<li><span><a href="#">SM篮球争霸赛圆满结束SM谁与争锋</a></span></li>
-			<li><a href="#">SM第二阶段比赛前两轮成绩</a></li>
-			<li><a href="#">SM行政村篮球争霸赛八强出炉</a></li>
-			<li><span><a href="#">SM篮球争霸赛圆满结束SM谁与争锋</a></span></li>
-			<li><a href="#">SM第二阶段比赛前两轮成绩</a></li>
+			  <volist name="result_hot" id="rh">
+			  <eq name="rh.type" value="1">
+			    <eq name="rh.isbold" value="1">
+			    <li><span><a href="__ROOT__/news/localinfo/id/<!--{$rh.id}--!>"><!--{$rh.title}--!></a></span></li>
+			    <else/>
+			    <li><a href="__ROOT__/news/localinfo/id/<!--{$rh.id}--!>"><!--{$rh.title}--!></a></li>
+			    </eq>
+			  <else/>
+			    <eq name="rh.isbold" value="1">
+			    <li><span><a href="__ROOT__/news/internationalinfo/id/<!--{$rh.id}--!>"><!--{$rh.title}--!></a></span></li>
+			    <else/>
+			    <li><a href="__ROOT__/news/internationalinfo/id/<!--{$rh.id}--!>"><!--{$rh.title}--!></a></li>
+			    </eq>
+			  </eq>
+			  </volist>
 			</ul>
 			</div>
 		</li>
@@ -224,6 +192,8 @@ $(function(){
   </div>
   <div class="ban_img"><img src="__PUBLIC__/index/images/img_06.jpg" alt="" /></div>
   <!--精英团队结束-->
+
+
     <!--团队动态开始-->
   <div class="dt">
   	<div class="dt_title">团队动态</div>
@@ -245,13 +215,31 @@ $(function(){
 		<p><img src="__PUBLIC__/index/images/img_07.jpg" alt="" /><br/><span>吕晓明</span></p>
 		<p class="pll"><span><a href="#">在爸爸怀中共度中末在爸爸怀中共度NBA全明星周末</a></span><em><a href="#">转发（5796）</a><a href="#">评论（6142）</a></em></p>
 		</li>
+		<li>
+		<p><img src="__PUBLIC__/index/images/img_07.jpg" alt="" /><br/><span>吕晓明</span></p>
+		<p class="pll"><span><a href="#">在爸爸怀中共度NBA全明星周末</a></span><em><a href="#">转发（5796）</a><a href="#">评论（6142）</a></em></p>
+		</li>
+		<li>
+		<p><img src="__PUBLIC__/index/images/img_07.jpg" alt="" /><br/><span>吕晓明</span></p>
+		<p class="pll"><span><a href="#">在爸爸怀中共度NBA全明星周末</a></span><em><a href="#">转发（5796）</a><a href="#">评论（6142）</a></em></p>
+		</li>
+		<li>
+		<p><img src="__PUBLIC__/index/images/img_09.jpg" alt="" /><br/><span>吕晓明</span></p>
+		<p class="pll"><span><a href="#">本赛季最后一场比赛本赛季最后一场比赛本赛季最后一场比赛</a></span><em><a href="#">转发（5796）</a><a href="#">评论（6142）</a></em></p>
+		</li>
+		<li>
+		<p><img src="__PUBLIC__/index/images/img_07.jpg" alt="" /><br/><span>吕晓明</span></p>
+		<p class="pll"><span><a href="#">在爸爸怀中共度中末在爸爸怀中共度NBA全明星周末</a></span><em><a href="#">转发（5796）</a><a href="#">评论（6142）</a></em></p>
+		</li>
 		</ul>
 	</div>
   </div>
   <!--团队动态结束-->
+
+
     <!--泉州体育开始-->
 	<div class="dt">
-		<div class="ty_title"><span><a href="#">更多>></a></span>泉州体育</div>
+		<div class="ty_title" style="border-left:1px solid #bfbfbf;border-right:1px solid #bfbfbf;"><span><a href="#">更多>></a></span>体育泉州</div>
 		<div class="ty_txt">
 		<ul>
 		<li style="background:none;">
@@ -273,8 +261,8 @@ $(function(){
 	<!--泉州体育结束-->
 	<!--市场资讯开始-->
 	<div class="sczx">
-		<div class="sczx_title">市场资讯</div>
-		<div class="sczx_txt">
+		<div class="sczx_title"><span><a href="#">更多>></a></span>市场资讯</div>
+		<div class="sczx_txt" style="font-size:14px;">
 		<ul>
 		<li><a href="#">信诚杯QBL企业篮球联赛</a></li>
 		<li><a href="#">总决赛晋江电视台报道QBL联赛开幕</a></li>
@@ -294,13 +282,13 @@ $(function(){
 	<!--市场资讯结束-->
 	<!--广告位开始-->
 	<div class="ad"><img src="__PUBLIC__/index/images/img_12.jpg" alt="" /></div>
-	<div class="ad02"><img src="__PUBLIC__/index/images/img_13.jpg" alt="" /></div>
+	<div class="ad02" style="margin-top:10px;"><img src="__PUBLIC__/index/images/img_13.jpg" alt="" /></div>
 	<!--广告位结束-->
 	<!--市场资讯、体坛焦点、焦点图开始-->
 	<div class="clear"></div>
 	<div class="con_left">
 		<div class="sczx02">
-			<div class="sczx_title02"><span><a href="#">更多>></a></span>市场资讯</div>
+			<div class="sczx_title02"><span><a href="#">更多>></a></span>公告/预告</div>
 			<div class="sczx02_txt">
 				<ul>
 				<li><a href="#">信诚杯QBL企业篮球联赛 </a></li>
@@ -349,7 +337,7 @@ $(function(){
 					<div class="jd_img"><a target="_self" href="javascript:goUrl()">
 					<div id="jdt"><!--***********************************************************--><!--焦点图Begin-->
 						<script type="text/javascript">
-							var width=263;var focus_height=256;var text_height=0;
+							var width=263;var focus_height=285;var text_height=0;
 							var swf_height = focus_height+text_height;
 							var pics='';var links='';var texts='';
 							pics+='http://www.bda.gov.cn/cms/res_base/whatycms_com_www/upload/article/image/2010_2/5_21/4b7pg9hf300k.jpg|';
@@ -491,7 +479,7 @@ $(function(){
 	<div class="con_right">
 			<div class="sczx">
 		<div class="sczx_title">健身时尚</div>
-		<div class="sczx_txt">
+		<div class="sczx_txt" style="font-size:14px; padding-bottom:13px;">
 		<ul>
 		<li><a href="#">信诚杯QBL企业篮球联赛 </a></li>
 		<li><a href="#">总决赛晋江电视台报道QBL联赛开幕</a></li>
@@ -529,29 +517,33 @@ $(function(){
 	<div class="mate">
 		<div class="hot_st_title">友情链接</div>
 		<ul>
-		<li><p>百度</p></li>
-		<li><p>一品红导航</p></li>
-		<li><p>飞天云体育传媒</p></li>
-		<li><p>体育晋江</p></li>
-		<li><p>东南体育</p></li>
-		<li><p>新浪体育</p></li>
-		<li><p>搜狐体育</p></li>
-		<li><p>百度</p></li>
-		<li><p>一品红导航</p></li>
+			<li>
+				<a href="#">聚光石</a>|
+				<a href="#">晋江摩登足球俱乐部</a>|
+				<a href="#">泉州号码网</a>|
+				<a href="#">体育晋江</a>|
+				<a href="#">东南体育</a>|
+				<a href="#">新浪体育</a>|
+				<a href="#">搜狐体育</a>|
+				<a href="#">百度</a>|
+				<a href="#">一品红导航</a>|
+				<a href="#">友情链接 </a>
+			</li>
 		</ul>
 	</div>
 	<!--友情链接结束-->
 	<!--版权信息开始-->
-	<div class="fotter">
-		<p> <a href="#">网站首页</a> | <a href="#">体育泉州</a> | <a href="#">动感泉州</a> | <a href="#">市场动态</a> | <a href="#">团队空间</a> | <a href="#">赛事预告</a> | <a href="#">体育论坛</a> | <a href="#">网上商城</a> | <a href="#">体坛内外</a></p>
-		<p>泉州体育网  版权所有  京ICP证060535号</p>
-		<p>联系人：泉州体育网    联系电话：0595-88093595    QQ：1569066157</p>
-	</div>
+	<include file="Index:footer" />
 	<!--版权信息结束-->
 </div>
 <script type="text/javascript">
 (function(){
-	
+		/* ---- TS 加的 start ----- */
+	setInterval(test222, 3000);
+	function test222(){
+		oNextTop.onclick();
+	}
+	/* ---- TS 加的 end ----- */
 	function G(s){
 		return document.getElementById(s);
 	}

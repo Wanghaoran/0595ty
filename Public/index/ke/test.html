@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="./kindeditor-min.js" type="text/javascript"></script>
+<script type="text/javascript" src="./lang/zh_CN.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+<script>
+        var editor;
+        KindEditor.ready(function(K) {
+	  editor = K.create('#editor_id', {
+	    uploadJson : './php/upload_json.php'
+
+	  });
+        });
+</script>
+<textarea name="content" id="editor_id" style="width:100%;height:400px;"></textarea>
+
+</body>
+</html>

@@ -7,6 +7,7 @@
 
 if (!defined('THINK_PATH')) exit();
 return array(
+  'SHOW_PAGE_TRACE' =>true, // 显示页面Trace信息
 
   'APP_FILE_CASE' => true,  //是否检查文件的大小写，仅对Window平台有效
 
@@ -25,4 +26,6 @@ return array(
   'DB_PREFIX' => '0595ty_',  //数据库表前缀
 
   'URL_CASE_INSENSITIVE' => true,  // 默认false 表示URL区分大小写 true则表示不区分大小写
+  'UPLOAD_PATH' => './Upload', //文件上传地址
+  'SAVE_PATH' => __ROOT__ . '/Upload', //文件保存地址
 );

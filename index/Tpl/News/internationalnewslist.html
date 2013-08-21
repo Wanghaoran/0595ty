@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link href="__PUBLIC__/index/css/list.css" type="text/css" rel="stylesheet" />
+<script src="__PUBLIC__/index/js/common.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="__PUBLIC__/index/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	
+	//选项卡鼠标滑过事件
+	$('#statetab .tabbtn li').mouseover(function(){
+		TabSelect("#statetab .tabbtn li", "#statetab .tabcon", "current", $(this))
+	});
+	$('#statetab .tabbtn li').eq(0).trigger("mouseover");
+	
+	//选项卡鼠标滑过事件
+	$('#clicktab .tabbtn li').click(function(){
+		TabSelect("#clicktab .tabbtn li", "#clicktab .tabcon", "current", $(this))
+	});
+	$('#clicktab .tabbtn li').eq(0).trigger("click");
+
+	function TabSelect(tab,con,addClass,obj){
+		var $_self = obj;
+		var $_nav = $(tab);
+		$_nav.removeClass(addClass),
+		$_self.addClass(addClass);
+		var $_index = $_nav.index($_self);
+		var $_con = $(con);
+		$_con.hide(),
+		$_con.eq($_index).show();
+	}
+	
+});
+</script>
+<title>国际新闻列表页 - 泉州体育网</title>
+</head>
+<body>
+<div id="wrap">
+	<!--导航条开始-->
+	<include file="Index:header" />
+		
+					
+	<!--导航条结束-->
+	<!--最新资讯开始-->
+	<!--最新资讯结束-->
+	<!--左边国际综合体育开始-->
+	<div class="list_left">
+		<p class="list_left_title">本地体育新闻</p>
+		<ul>
+		  <volist name="result" id="r">
+		  <li><span><!--{$r.addtime|date="Y-m-d", ###}--!></span><a href="__URL__/internationalinfo/id/<!--{$r.id}--!>"><!--{$r.title}--!>ss</a></li>
+		  </volist>
+		</ul>
+		<div id="page_div">
+		<!--{$show}--!>
+		</div>
+	</div>
+	<!--左边国际综合体育结束-->
+	
+	<!--体坛花絮开始-->
+	<div class="list_right">
+		<div class="sczx">
+		<div class="sczx_title"><span><a href="#">更多>></a></span>体坛花絮</div>
+		<div class="sczx_txt" style="font-size:14px;">
+		<ul>
+		<li><a href="#">信诚杯QBL企业篮球联赛</a></li>
+		<li><a href="#">总决赛晋江电视台报道QBL联赛开幕</a></li>
+		<li><a href="#">晋江篮球精英对抗赛</a></li>
+		<li><a href="#">意大利1-0斯洛文尼亚</a></li>
+		<li><a href="#">巴尔扎雷蒂突破</a></li>
+		<li><a href="#">总决赛晋江电视台报道QBL联赛开幕</a></li>
+		<li><a href="#">晋江篮球精英对抗赛</a></li>
+		<li><a href="#">意大利1-0斯洛文尼亚 </a></li>
+		<li><a href="#">巴尔扎雷蒂突破</a></li>
+		<li><a href="#">信诚杯QBL企业篮球联赛 </a></li>
+		</ul>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<!--体坛花絮结束-->	
+	<!--广告位开始-->
+	<div class="right_ad"><img src="__PUBLIC__/index/images/list_02.png" width="261" height="399" /> </div>
+	<!--广告位结束-->
+	
+	<!--热点图片开始-->
+	<div class="sczx">
+		<div class="sczx_title"><span><a href="#">更多>></a></span>热点图片</div>
+		<div class="sczx_txt">
+			<table width="240" border="0" cellspacing="0" cellpadding="0" class="hotimg">
+			  <tr>
+				<td><img src="__PUBLIC__/index/images/list_03.png" width="115" height="89" alt="" class="img" /></td>
+				<td align="right"><img src="__PUBLIC__/index/images/list_04.png" width="115" height="89" alt="" class="img" /></td>
+			  </tr>
+			  <tr>
+				<td><a href="#">彭帅/谢淑薇温网夺冠</a></td>
+				<td style="text-align:center;"><a href="#">斯杯阿联16分演暴扣 </a></td>
+			  </tr>
+			   <tr> 
+				<td  align="left"><img src="__PUBLIC__/index/images/list_05.png" width="115" height="89" alt="" class="img" /></td>
+				<td align="right"><img src="__PUBLIC__/index/images/list_06.png" width="115" height="89" alt="" class="img" /></td>
+			  </tr>
+			  <tr>
+				<td><a href="#">李永波本色出演恐怖片</a></td>
+				<td style="text-align:center;"><a href="#">阿尔滨鲁能美太太团</a></td>
+			  </tr>
+			   <tr>
+				<td  align="left"><img src="__PUBLIC__/index/images/list_07.png" width="115" height="89" alt="" class="img" /></td>
+				<td align="right"><img src="__PUBLIC__/index/images/list_08.png" width="115" height="89" alt="" class="img" /></td>
+			  </tr>
+			  <tr>
+				<td><a href="#">巩新亮助阵意大利</a></td>
+				<td style="text-align:center;"><a href="#">靓丽宝贝热舞助阵</a></td>
+			  </tr>
+			</table>
+
+		</div>
+	</div>
+	<!--热点图片结束-->
+	</div>
+	
+		<!--广告位开始-->
+		<div class="ad02"><A href="#"><img src="__PUBLIC__/index/images/list_ad.png" width="990" height="99" /></A></div>
+		<!--广告位结束-->
+	<!--合作伙伴开始-->
+	<div class="clear"></div>
+
+	<!--版权信息开始-->
+<include file="Index:footer" />
+	<!--版权信息结束-->
+</div>
+<script type="text/javascript">
+(function(){
+		/* ---- TS 加的 start ----- */
+	setInterval(test222, 3000);
+	function test222(){
+		oNextTop.onclick();
+	}
+	/* ---- TS 加的 end ----- */
+	function G(s){
+		return document.getElementById(s);
+	}
+	
+	function getStyle(obj, attr){
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		}else{
+			return getComputedStyle(obj, false)[attr];
+		}
+	}
+	
+	function Animate(obj, json){
+		if(obj.timer){
+			clearInterval(obj.timer);
+		}
+		obj.timer = setInterval(function(){
+			for(var attr in json){
+				var iCur = parseInt(getStyle(obj, attr));
+				iCur = iCur ? iCur : 0;
+				var iSpeed = (json[attr] - iCur) / 5;
+				iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+				obj.style[attr] = iCur + iSpeed + 'px';
+				if(iCur == json[attr]){
+					clearInterval(obj.timer);
+				}
+			}
+		}, 30);
+	}
+
+	var oPic = G("picBox");
+	var oList = G("listBox");
+	
+	var oPrev = G("prev");
+	var oNext = G("next");
+	var oPrevTop = G("prevTop");
+	var oNextTop = G("nextTop");
+
+	var oPicLi = oPic.getElementsByTagName("li");
+	var oListLi = oList.getElementsByTagName("li");
+	var len1 = oPicLi.length;
+	var len2 = oListLi.length;
+	
+	var oPicUl = oPic.getElementsByTagName("ul")[0];
+	var oListUl = oList.getElementsByTagName("ul")[0];
+	var w1 = oPicLi[0].offsetWidth;
+	var w2 = oListLi[0].offsetWidth;
+
+	oPicUl.style.width = w1 * len1 + "px";
+	oListUl.style.width = w2 * len2 + "px";
+
+	var index = 0;
+	
+	var num = 5;
+	var num2 = Math.ceil(num / 2);
+
+	function Change(){
+
+		Animate(oPicUl, {left: - index * w1});
+		
+		if(index < num2){
+			Animate(oListUl, {left: 0});
+		}else if(index + num2 <= len2){
+			Animate(oListUl, {left: - (index - num2 + 1) * w2});
+		}else{
+			Animate(oListUl, {left: - (len2 - num) * w2});
+		}
+
+		for (var i = 0; i < len2; i++) {
+			oListLi[i].className = "";
+			if(i == index){
+				oListLi[i].className = "on";
+			}
+		}
+	}
+	
+	oNextTop.onclick = oNext.onclick = function(){
+		index ++;
+		index = index == len2 ? 0 : index;
+		Change();
+	}
+
+	oPrevTop.onclick = oPrev.onclick = function(){
+		index --;
+		index = index == -1 ? len2 -1 : index;
+		Change();
+	}
+
+	for (var i = 0; i < len2; i++) {
+		oListLi[i].index = i;
+		oListLi[i].onclick = function(){
+			index = this.index;
+			Change();
+		}
+	}
+	
+})()
+</script>
+</body>
+</html>

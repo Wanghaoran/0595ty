@@ -11,10 +11,22 @@
       <!--导航条开始-->
       <div class="head_banner">
 	<ul>
-	  <li  id="index1"><a href="__ROOT__">网站首页</a></li>
+	  <if condition="(MODULE_NAME eq 'Index') AND (ACTION_NAME eq 'index')">
+	  <li class="head_banner_btn_pich" id="index1"><a href="__ROOT__">网站首页</a></li>
+	  <else/>
+	  <li id="index1"><a href="__ROOT__">网站首页</a></li>
+	  </if>
 	  <li  id="index2"><a href="#">精英团队</a></li>
-	  <li  id="index3"><a href="__ROOT__/news/localnewslist">本地新闻</a></li>
-	  <li  id="index4"><a href="__ROOT__/news/internationalnewslist">国际新闻</a></li>
+	  <if condition="(MODULE_NAME eq 'News') AND (ACTION_NAME eq 'localnewslist')">
+	  <li class="head_banner_btn_pich" id="index3"><a href="__ROOT__/news/localnewslist">本地新闻</a></li>
+	  <else/>
+	  <li id="index3"><a href="__ROOT__/news/localnewslist">本地新闻</a></li>
+	  </if>
+	  <if condition="(MODULE_NAME eq 'News') AND (ACTION_NAME eq 'internationalnewslist')">
+	  <li class="head_banner_btn_pich" id="index4"><a href="__ROOT__/news/internationalnewslist">国际新闻</a></li>
+	  <else/>
+	  <li id="index4"><a href="__ROOT__/news/internationalnewslist">国际新闻</a></li>
+	  </if>
 	  <li  id="index5"><a href="#">市场资讯</a></li>
 	  <li  id="index6"><a href="#">特邀评论</a></li>
 	  <li  id="index7"><a href="#">论坛</a></li>

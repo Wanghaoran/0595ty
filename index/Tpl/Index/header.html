@@ -37,13 +37,20 @@
       <!--导航条结束-->
       <!--最新资讯开始-->
       <div class="news">
-	<marquee scrollamount=2  scrolldelay=2  align="left" style="height:23px; margin-right:20px;" onmouseover="this.stop()"  onmouseout="this.start()" direction="left">
-	<ul>
-	  <li>“侨兴杯”公开赛助力蛇年春节</li>
-	  <li>全国篮球锦标赛北大泉州附中获中亚军</li>
-	  <li>SM村级篮球争霸赛程序</li>
+	<ul id="scrolltext" style="overflow: hidden;">
+	  <div style="height:18px;width:3750px;white-space :nowrap;overflow1:hidden">
+	    <li style="padding-left:26px;"><a href="#">“侨兴杯”公开赛助力蛇年春节</a></li>
+	  <li style="padding-left:26px;"><a href="#">全国篮球锦标赛北大泉州附中获中亚军</a></li>
+	  <li style="padding-left:26px;"><a href="#">SM村级篮球争争霸赛程序序</a></li>
+	  <li style="padding-left:26px;"><a href="#">“侨兴杯”公开赛助力蛇年春1节</a></li>
+	  <li style="padding-left:26px;"><a href="#">“侨兴杯”公开赛助力蛇年春2节</a></li>
+	  <li style="padding-left:26px;"><a href="#">“侨兴杯”公开赛助力蛇年春3节</a></li>
+ </div>
+
 	</ul>
-	</marquee>
       </div>
+      <script>
+	setInterval( function() {$("#scrolltext").animate({scrollLeft: ($("#scrolltext").scrollLeft() >= 1000 ? 0:$("#scrolltext").scrollLeft() + 580) },1000); } ,5000);
+      </script>
 
 	<!--最新资讯结束-->

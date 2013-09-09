@@ -105,11 +105,11 @@ GetObj("ISL_Cont_1").onmouseout=function(){AutoPlay_1()}
 AutoPlay_1();
 }
 
-function scroll(wraper,children,speed,type)
+function scroll(wraper,speed,type)
 {
 	var wrap = $(wraper);
 	var sc = function(){
-		var item = $(children).eq(0);
+		var item = $(wraper).children().eq(0);
 		var object1,object2;
 		if(type)
 		{
@@ -126,6 +126,7 @@ function scroll(wraper,children,speed,type)
 			$(this).parent().append($(this).remove());	
 		});
 	}
+	sc();
 	var st = setInterval(sc,speed+500);
 	wrap.hover(function(){clearInterval(st);},function(){st = setInterval(sc,speed+500)});
 }

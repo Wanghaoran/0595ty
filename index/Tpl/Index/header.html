@@ -6,31 +6,19 @@
 	<span class="span"><a href="#">加入收藏</a> | <a href="#">设为首页</a></span>
       </div>
       <div class="head_img">
-	<p><a href="__ROOT__"><img src="__PUBLIC__/index/images/logo.gif" border="0" alt="" /></a></p><p><img src="__PUBLIC__/index/images/banner.jpg" border="0" alt="" /></p>
+	<p><a href="__ROOT__"><img src="__PUBLIC__/index/images/logo.jpg" border="0" alt="" /></a></p><p><img src="__PUBLIC__/index/images/banner.jpg" border="0" alt="" /></p>
       </div>
       <!--导航条开始-->
       <div class="head_banner">
 	<ul>
-	  <if condition="(MODULE_NAME eq 'Index') AND (ACTION_NAME eq 'index')">
-	  <li class="head_banner_btn_pich" id="index1"><a href="__ROOT__">网站首页</a></li>
-	  <else/>
 	  <li id="index1"><a href="__ROOT__">网站首页</a></li>
-	  </if>
 	  <li  id="index2"><a href="#">精英团队</a></li>
-	  <if condition="(MODULE_NAME eq 'News') AND (ACTION_NAME eq 'localnewslist')">
-	  <li class="head_banner_btn_pich" id="index3"><a href="__ROOT__/news/localnewslist">本地新闻</a></li>
-	  <else/>
-	  <li id="index3"><a href="__ROOT__/news/localnewslist">本地新闻</a></li>
-	  </if>
-	  <if condition="(MODULE_NAME eq 'News') AND (ACTION_NAME eq 'internationalnewslist')">
-	  <li class="head_banner_btn_pich" id="index4"><a href="__ROOT__/news/internationalnewslist">国际新闻</a></li>
-	  <else/>
-	  <li id="index4"><a href="__ROOT__/news/internationalnewslist">国际新闻</a></li>
-	  </if>
+	  <li id="index3"><a href="__ROOT__/news/local">体育泉州</a></li>
+	  <li id="index4"><a href="__ROOT__/news/international">国际体坛</a></li>
 	  <li  id="index5"><a href="#">市场资讯</a></li>
 	  <li  id="index6"><a href="#">特邀评论</a></li>
 	  <li  id="index7"><a href="#">论坛</a></li>
-	  <li  id="index8"><a href="#">公告/预告</a></li>
+	  <li  id="index8"><a href="__ROOT__/notice/lists">公告/预告</a></li>
 	  <li  id="index9"><a href="#">商城</a></li>
 	</ul>
       </div>

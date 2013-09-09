@@ -151,7 +151,7 @@ text-align:center;
 width:90px;
 display:block;
 }
-.head_banner_btn_pich{
+.head_banner ul li a:hover{
 color:#ffffff;
 cursor:pointer;
 height:32px;
@@ -161,7 +161,7 @@ width:90px;
 text-decoration:none;
 display:block;
 }
-.head_banner ul li a:hover{
+.head_banner_btn_pich{
 color:#ffffff;
 cursor:pointer;
 height:32px;
@@ -716,7 +716,6 @@ width:259px;
 position:relative;
 height:374px;
 *height:359px !important;
-overflow:hidden;
 border:1px solid #cfcfcf;
 margin-left:1px;
 }

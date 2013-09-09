@@ -1,0 +1,160 @@
+/* CSS Document */
+.tabbox{width:692px;margin:0px auto; height:565px; *height:565px !important;}
+.tabbox .tabbtn{height:24px;background:url(images/green_bg.gif) repeat-x;}
+.tabbox .tabbtn li{float:left;position:relative; width:44px; margin-left:5px;}
+.tabbox .tabbtn li a,.tabbox .tabbtn li span{display:block;float:left;height:24px;line-height:24px;overflow:hidden;width:44px;text-align:left;font-size:12px;cursor:pointer; font-weight:500;}
+.tabbox .tabbtn li.current{width:44px; margin-top:1px;}
+.tabbox .tabbtn li.current a,.tabbox .tabbtn li.current span{height:24px;line-height:24px;color:#000000;font-weight:500;background:url(../images/team_06.png) no-repeat left top;}
+.tabbox .tabcon{padding:10px;}
+.tabbox .tabcon li{line-height:30px;color:#000000; font-weight:500; font-size:12px; font-family:"宋体"; border-bottom:none; clear:both;width:690px;}
+.tabbox .tabcon li .a{ color:#dc0000; text-decoration:underline;}
+.tabbox .tabcon li .timer{ color:#6b6b6b;}
+.team_newsdt{background:url(../images/green_bg.gif) repeat left top;height:26px;color:#4c5245;font-family:"微软雅黑";font-size:14px;line-height:26px;text-indent:10px;font-weight:600;width:692px;margin-left:8px;margin-top:10px;}
+.team_page{ text-align:center;  font-weight:500; font-size:12px; font-family:"宋体"; line-height:35px;}
+.team_page .num{ color:#e94d00; font-weight:700;}
+.team_page a{ margin-right:10px;}
+.mod18{
+width:687px;
+height:477px;
+position:relative;
+background:url(../images/flash_bg02.jpg) no-repeat left top;
+margin-left:7px;
+}
+.mod18 .btn{
+position:absolute;
+width:19px;
+height:21px;
+top:420px;
+cursor:pointer;
+z-index:99;
+font-size:50px;
+font-weight:bold;
+}
+.mod18 .prev{
+left:15px;
+background:url(../images/prevBtn.png) no-repeat;
+}
+.mod18 #prevTop,.mod18 #nextTop{
+top:180px;
+width:46px;
+height:48px;
+}
+.mod18 #prevTop{
+background:url(../images/prevBtnTop.png) 0 0 no-repeat;
+}
+.mod18 #nextTop{
+background:url(../images/nextBtnTop.png) 0 0 no-repeat;
+}
+.mod18 .next{
+right:15px;
+background:url(../images/nextBtn.png) no-repeat;
+}
+.mod18 li{
+float:left;
+}
+.mod18 .cf li{
+position:relative;
+color:#fff;
+}
+.mod18 .cf a{
+display:block;
+width:687px;
+height:376px;
+position:absolute;
+color:#fff;
+}
+.mod18 .cf li span{
+display:block;
+width:687px;
+position:absolute;
+left:0;
+bottom:0;
+padding:10px 20px;
+line-height:22px;
+text-align:left;
+background:rgba(0,0,0,0.6);
+filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorstr = "#60000000",endColorstr = "#60000000");
+}
+.mod18 .picBox{
+height:376px;
+position:relative;
+overflow:hidden;
+padding-top:8px;
+}
+.mod18 .picBox ul{
+height:376px;
+position:absolute;
+}
+.mod18 .picBox li{
+width:687px;
+height:376px;
+padding-left:5px;
+}
+.mod18 .listBox{
+width:575px;
+height:77px;
+margin:0 auto 0 40px;
+position:relative;
+padding:20px 0 30px 5px;
+overflow:hidden;
+}
+.mod18 .listBox ul{
+height:77px;
+position:absolute;
+}
+.mod18 .listBox li{
+width:74px;
+height:53px;
+cursor:pointer;
+position:relative;
+padding-left:8px;
+}
+.mod18 .listBox li i{
+display:none;
+}
+.mod18 .listBox li a{
+display:block;
+width:74px;
+height:53px;
+}
+.mod18 .listBox li img{
+width:72px;
+height:51px; 
+border:1px solid #bababa;
+}
+.mod18 .listBox .on img{
+width:70px;
+height:49px;
+border:3px solid #ff0000;
+}
+.mod18 .listBox .on i{
+display:block;
+}
+.heat_map{
+margin:10px auto;
+border:1px solid #d2d2d2;
+padding-bottom:10px;
+}
+.heat_map .imgbg{
+text-align:center;
+width:169px;
+height:169px;
+background:url(../images/hot_04.png) no-repeat center top;
+*background:url(../images/hot_04.png) no-repeat left top !important;
+}
+.heat_map .imgbg_hover{
+text-align:center;
+width:169px;
+height:169px;
+background:url(../images/hot_05.png) no-repeat center top;
+*background:url(../images/hot_05.png) no-repeat left top !important;
+}
+.heat_map .tbl{
+width:950px;
+color:#000000;
+text-align:center;
+margin-top:13px;
+}
+.tbl .txts{
+padding-bottom:2px;
+}

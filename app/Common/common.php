@@ -79,6 +79,14 @@ function N($key, $step=0,$save=false) {
         S('N_'.$key,$_num[$key],$save);
     }
 }
+// 循环创建目录
+function mk_dir($dir, $mode = 0777) {
+    if (is_dir($dir) || @mkdir($dir, $mode))
+        return true;
+    if (!mk_dir(dirname($dir), $mode))
+        return false;
+    return @mkdir($dir, $mode);
+}
 
 /**
  * 字符串命名风格转换

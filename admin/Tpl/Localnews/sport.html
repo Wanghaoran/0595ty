@@ -1,0 +1,84 @@
+<form id="pagerForm" action="__ACTION__" method="post">
+  <input type="hidden" name="pageNum" value="<!--{$currentPage}--!>"/>
+  <input type="hidden" name="title" value="<!--{$Think.request.title}--!>" />
+</form>
+
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" action="__ACTION__" method="post">
+	<div class="searchBar">
+		<ul class="searchContent">
+			<li style="width:330px;">
+			<label>新闻标题：</label>
+			  <input type="text" name="title" />
+			</li>
+		</ul>
+		<div class="subBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">查询</button></div></div></li>
+			</ul>
+		</div>
+	</div>
+	</form>
+</div>
+
+<div class="pageContent">
+	<div class="panelBar">
+	  <ul class="toolBar">
+	    <li><a class="add" href="__APP__/common/addarticle/cid/3/callId/localnews_sport" target="navTab" mask="true" ><span>新增</span></a></li>
+	    <li class=""><a class="delete" href="__APP__/common/delarticle/navTabId/localnews_sport" posttype="string" rel="ids" target="selectedTodo" title="确实要删除这些记录吗?" warn="请选择新闻"><span>删除</span></a></li>
+	    <li><a class="edit" href="__APP__/common/editarticle/id/{sid_role}/callId/localnews_sport" target="navTab" mask="true" warn="请选择新闻"><span>编辑</span></a></li>
+
+		</ul>
+	</div>
+
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+		  <tr>
+		     <th width="5"><div title="" class="gridCol"><input type="checkbox" class="checkboxCtrl" group="ids"></div></th>
+			<th width="10">编号</th>
+			<th width="150">新闻标题</th>
+			<th width="20">今日要闻</th>
+			<th width="20">加粗显示</th>
+			<th width="20">幻灯显示</th>
+			<th width="60">添加时间</th>
+		</tr>
+		</thead>
+		<tbody>
+		<volist name="result" id="r">
+		<tr target="sid_role" rel="<!--{$r.id}--!>">
+		  <td><input type="checkbox" value="<!--{$r.id}--!>" name="ids"></td>
+			  <td><!--{$r.id}--!></td>
+			  <td><!--{$r.title}--!></td>
+			  <eq name="r.ishot" value="1">
+			  <td style="color:green">是</td>
+			  <else/>
+			  <td style="color:red">否</td>
+			  </eq>
+			  <eq name="r.isbold" value="1">
+			  <td style="color:green">是</td>
+			  <else/>
+			  <td style="color:red"s>否</td>
+			  </eq>
+			  <eq name="r.isslide" value="1">
+			  <td style="color:green">是</td>
+			  <else/>
+			  <td style="color:red"s>否</td>
+			  </eq>
+			  <td><!--{$r.addtime|date="Y-m-d H:i:s", ###}--!></td>
+			 
+			</tr>
+		</volist>
+		</tbody>
+	</table>
+	<div class="panelBar">
+	  
+	  
+		<div class="pages">
+		  <span>共<!--{$count}--!>条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="<!--{$count}--!>" numPerPage="<!--{$listRows}--!>" pageNumShown="10" currentPage="<!--{$currentPage}--!>"></div>
+	</div>
+
+</div>
+
+

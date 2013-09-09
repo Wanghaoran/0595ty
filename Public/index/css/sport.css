@@ -1,0 +1,259 @@
+.sport_01{
+	background-image:url(../images/yw_bg.gif);
+	background-position:44px;
+	height:334px;
+	overflow:hidden;
+}
+.sport_02{
+	margin-top:9px;
+	height:351px;
+	overflow:hidden;
+}
+.sport03{
+	margin-top:9px;
+	height:399px;
+	overflow:hidden;
+}
+.sport04{
+	margin-top:9px;
+	height:312px;
+	overflow:hidden;
+}
+.sport_list{
+	float:left;
+	background:#fff;
+	margin-left:8px;
+}
+.sport_list01{
+	width:326px;
+	margin-left:6px;
+}
+.sport_list02{
+	width:386px;
+}
+.sport_list03{
+	width:262px;
+}
+.sport_list04{
+	width:324px;
+	margin-left:6px;
+}
+.sport_list05{
+	width:384px;
+}
+.sport_list06{
+	width:260px;
+}
+.sport_list07{
+	width:718px;
+	margin-left:6px;
+}
+.sport_list08{
+	width:326px;
+	height:333px;
+	margin-left:6px;
+	background:url(../images/sport_07.png) no-repeat left top;
+}
+.sport_news{
+	padding:9px 10px;
+}
+.sport_news li{
+	font-size:14px;
+	margin-top:16px;
+	line-height:14px;
+	height:14px;
+	background:url(../images/sport_06.png) no-repeat;
+	background-position:left;
+	padding-left:16px;
+}
+.sport_news02{
+	padding-top:14px;
+	padding-left:10px;
+	padding-right:10px;
+}
+.sport_news02 li{
+	border-bottom:1px dashed #c2bcbc;
+	font-size:14px;
+	padding-bottom:9px;
+	line-height:14px;
+	height:14px;
+	margin-top:11px;
+	background:url(../images/sport_06.png) no-repeat left 7px;
+	padding-left:16px;
+}
+.sport_news03{
+	padding-top:12px;
+	padding-left:12px;
+	padding-bottom:15px;
+}
+.sport_news03 li{
+	background:url(../images/sport_06.png) no-repeat;
+	background-position:left;
+	padding-left:16px;
+	font-size:12px;
+	margin-top:18px;
+	line-height:12px;
+	height:12px;
+}
+.sport_news_first{
+	margin-top:0px !important;
+}
+.sport_pics{
+	margin-top:10px;
+	height:165px;
+}
+.sport_pics li{
+	width:140px;
+	float:left;
+	margin-left:6px;
+	text-align:center;
+}
+.sport_pics li p{
+	font-size:12px;
+	line-height:14px;
+	*margin-top:5px;
+}
+.sport_pics_first{
+	margin-left:3px !important;
+}
+.sport_video{
+	margin-top:17px;
+	margin-bottom:3px;
+	height:102px;
+}
+.sport_video li{
+	float:left;
+	margin-left:9px;
+	height:108px;
+}
+.sport_video_play{
+	position:relative;
+	display:block;
+	top:-58px;
+	*top:-53px;
+	left:3px;
+}
+.sport_video_text{
+	position:relative;
+	width:133px;
+	height:25px;
+	top:-55px;
+	*top:-50px;
+	left:1px;
+	color:#fff;
+	text-align:center;
+	background-color:#000;
+	filter:alpha(opacity=60);
+	opacity:.6;
+}
+.sport_border01{
+	border-left:1px solid #c2bcbc;
+	border-right:1px solid #c2bcbc;
+	border-bottom:1px solid #c2bcbc;
+}
+.sport_border02{
+	border:1px solid #c2bcbc;
+}
+.sport_title01{
+	background-image:url(../images/sport_08.png);
+	color:#fff;
+	padding-left:10px;
+	height:31px;
+	line-height:31px;
+	font-weight:bolder;
+	font-size:13px;
+}
+.sport_title02{
+	background-image:url(../images/sport_02.png);
+	padding-left:10px;
+	height:31px;
+	line-height:31px;
+	font-weight:bolder;
+	font-size:13px;
+}
+.sport_title03{
+	background-image:url(../images/green_bg.gif);
+	padding-left:10px;
+	height:26px;
+	line-height:26px;
+	font-weight:bolder;
+	font-size:13px;
+}
+.sport_title04{
+	background-image:url(../images/sport09.png);
+}
+.sport_banner{
+	width:988px;
+	margin:9px auto;
+	height:113px;
+	border:1px solid #c2bcbc;
+}
+.sport_banner02{
+	border:1px solid #c2bcbc;
+	height:397px;
+}
+.sport_banner03{
+	width:988px;
+	margin:9px auto;
+	height:100px;
+	border:1px solid #c2bcbc;
+}
+.sport_more{
+	display:inline-block;
+	margin-right:9px;
+	font-weight:normal;
+	float:right;
+	font-size:12px;
+}
+.sport_hot{
+	color:#e40000;
+}
+.sport_hotpic{
+	float:left;
+	margin-top:10px;
+	margin-left:3px;
+	border:1px solid #c2bcbc;
+	height:353px;
+	text-align:center;
+	color:#01578a;
+	font-size:18px;
+}
+.sport_zhizao01{
+	float:left;
+	margin-top:21px;
+	margin-left:6px;
+}
+.sport_zhizao02{
+	float:left;
+	width:210px;
+	margin-left:10px;
+	line-height:19px;
+	padding-top:13px;
+	padding-bottom:20px;
+}
+.sport_pl{
+	float:left;
+	width:324px;
+	height:197px;
+	margin-top:10px;
+	background-color:#edfaff;
+	border-top:1px dashed #5ca9c5;
+	border-bottom:1px dashed #5ca9c5;
+	border-right:1px solid #c2bcbc;
+}
+.sport_pl ul{
+	float:left;
+	width:270px;
+	margin-left:12px;
+}
+.sport_pl ul li{
+	line-height:27px;
+	color:#5a5a5a;
+}
+.sport_name{
+	color:#0099ff;
+	font-weight:700;
+}
+.mate{
+	width:988px;
+}

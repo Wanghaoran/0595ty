@@ -191,7 +191,7 @@ padding-left:20px;
 }
 .story{
 background:url(../images/yw_bg.gif) repeat-x left top;
-height:377px;
+min-height:377px;
 }
 .story ul li{
 float:left;
@@ -203,6 +203,9 @@ height:372px;
 }
 .today_news{
 background:#FFFFFF;
+}
+.today_newshot{
+background:none;
 }
 .today_news_title{
 background:url(../images/yw_bg02.gif) no-repeat right top;
@@ -444,6 +447,11 @@ color:#5a5a5a;
 float:left;
 margin-top:10px;
 }
+.sczx_hot{
+float:left;
+margin-left:7px;
+margin-top:1px;
+}
 .sczx_title{
 background:url(../images/sc_bg.gif) no-repeat left top;
 width:262px;
@@ -454,7 +462,29 @@ font-family:"微软雅黑";
 font-size:14px;
 text-indent:15px;
 }
-.sczx_title span{
+.sczx_title_hot{
+background:url(../images/hot_01.png) repeat-x left top;
+width:293px;
+height:31px;
+line-height:31px;
+color:#000000;
+font-family:"微软雅黑";
+font-size:14px;
+text-indent:15px;
+border:1px solid #bfbfbf;
+border-bottom:0;
+}
+.sczx_title011{
+background:url(../images/team_07.png) no-repeat left top;
+width:286px;
+height:31px;
+line-height:31px;
+color:#000000;
+font-family:"微软雅黑";
+font-size:14px;
+text-indent:15px;
+}
+.sczx_title span , .sczx_title011 span , .sczx_title_hot span{
 font-size:12px;
 font-family:"宋体";
 float:right;
@@ -464,13 +494,31 @@ margin-right:10px;
 border:1px solid #cfcfcf;
 padding:10px;
 }
+.sczx_txthot{
+border:1px solid #cfcfcf;
+padding:5px 10px 10px 10px;
+font-size:14px; 
+background:#FFFFFF; 
+width:273px;
+border-top:0;
+}
+.sczx_txthot ul{
+height:83px;
+}
+.sczx_txthot ul li{
+clear:both;
+color:#000000;
+line-height:28px;
+width:290px;
+font-size:12px;
+}
 .sczx_txt ul li{
 background:url(../images/ico_2.gif) no-repeat 5px 15px;
 color:#000000;
 text-indent:20px;
 line-height:29px;
 }
-.sczx_txt ul li a{
+.sczx_txt ul li a , , sczx_txthot ul li a{
 color:#000000;
 }
 .ad{
@@ -695,7 +743,6 @@ width:259px;
 position:relative;
 height:374px;
 *height:359px !important;
-overflow:hidden;
 border:1px solid #cfcfcf;
 margin-left:1px;
 }

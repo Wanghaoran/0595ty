@@ -2,9 +2,20 @@
 
 class IndexAction extends CommonAction {
   public function index(){
+    $Article = M('Article');
+    $Notice = M('Notice');
+    //首页幻灯
+    $result_slide = $Article -> field('id,title,pic') -> where(array('isslide' => 1)) -> order('addtime DESC') -> limit(10) -> select();
+    $this -> assign('result_slide', $result_slide);
     //今日要闻
-    $result_hot = M('LocalNews') -> field('id,title,isbold,"1" as type') -> where('ishot=1') -> union('SELECT id,title,isbold,"2" as type FROM 0595ty_international_news WHERE ishot=1', true) -> select();
+    $result_hot = $Article -> field('id,title,isbold') -> where(array('ishot' => 1)) -> limit(10) -> order('addtime DESC') -> select();
     $this -> assign('result_hot', $result_hot);
+    //市场资讯
+    $result_news = $Article -> field('id,title') -> where('cid=2')  -> limit(10) -> order('addtime DESC') -> select();
+    $this -> assign('result_news', $result_news);
+    //公告/预告
+    $result_notice = $Notice -> field('id,title') -> limit(7) -> order('addtime DESC') -> select();
+    $this -> assign('result_notice', $result_notice);
     $this -> display();
   }
 }

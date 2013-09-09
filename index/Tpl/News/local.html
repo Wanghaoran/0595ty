@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>体育泉州 - 泉州体育网</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/index/css/sport.css"/>
+<script type="text/javascript" src="__PUBLIC__/index/js/common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+<include file="Index:header" />
+	<!--导航条结束-->
+	<!--最新资讯开始-->
+	<div class="sport_01">
+		<div class="sport_list sport_list08">
+			<div id="picviewer" style="padding-left:3px; padding-top:3px;">
+				<div class="jd_img">
+					<a target="_self">
+						<div id="jdt"><!--***********************************************************--><!--焦点图Begin-->
+							<script type="text/javascript">
+								var width=320;var focus_height=327;var text_height=0;
+								var swf_height = focus_height+text_height;
+								var pics='';var links='';var texts='';
+								<volist name="result_slide" id="rs">
+								  pics+='__ROOT__/Upload/<!--{$rs.pic}--!>|';
+								  links+='__ROOT__/news/articleinfo/id/<!--{$rs.id}--!>|';
+								</volist>
+							
+								pics=pics.substring(0,pics.length-1);
+								links=links.substring(0,links.length-1);
+								texts=texts.substring(0,texts.length-1);
+								document.write('<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="'+width+'" height="'+swf_height+'">');
+								document.write('<param name="movie" value="http://www.bda.gov.cn/cms/front_res/com_tag/focus1.swf"/>');
+								document.write('<param name="quality" value="high"/><param name="bgcolor" value="#F0F0F0"/>');
+								document.write('<param name="menu" value="false"/><param name="wmode" value="opaque"/>');
+								document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+width+'&borderheight='+focus_height+'&textheight='+text_height+'"/>');
+								document.write('<embed src="http://www.bda.gov.cn/cms/front_res/com_tag/focus1.swf" width="'+width+'" height="'+swf_height+'" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" wmode="opaque" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>');
+								document.write('</object>');
+							</script>
+						</div>
+						<!--***************************************************************-->
+					</a>
+					<div class="jd_t"></div>
+				</div>
+			</div>
+		</div>
+		<div class="sport_list sport_list02">
+		  <h1 class="sport_title01"><span class="sport_more"><a href="__URL__/articlelist/cid/1" style="color:#FFFFFF;">更多>></a></span>泉州篮球/足球/排球</h1>
+			<ul class="sport_news sport_border01">
+			  <volist name="result_ball" id="rb">
+			    <eq name="i" value="1">
+			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    <else/>
+			    <li><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    </eq>
+			  </volist>
+			</ul>
+		</div>
+		<div class="sport_list sport_list03">
+			<h1 class="sport_title01 sport_title04"><span class="sport_more"><a href="__URL__/articlelist/cid/2" style="color:#FFFFFF;">更多>></a></span>市场资讯</h1>
+			<ul class="sport_news sport_border01">
+			    <volist name="result_news" id="rn">
+			    <eq name="i" value="1">
+			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rn.id}--!>" target="_blank"><!--{$rn.title}--!></a></li>
+			    <else/>
+			    <li><a href="__URL__/articleinfo/id/<!--{$rn.id}--!>" target="_blank"><!--{$rn.title}--!></a></li>
+			    </eq>
+			  </volist>
+			</ul>
+		</div>
+	</div>
+	<div class="sport_02">
+		<div class="sport_list sport_list01">
+			<div class="sport_list04 sport_border02" style="margin:0px;float:left;">
+				<h1 class="sport_title02"><span class="sport_more"><a href="__URL__/articlelist/cid/5">更多>></a></span>泉州制造</h1>
+				<p class="sport_zhizao01"><img src="__ROOT__/Upload/<!--{$result_made.pic}--!>" width="84" class="sport_border02" /></p>
+				<div class="sport_zhizao02">
+					<h1 class="sport_hot"><b><a href="__ROOT__/news/articleinfo/id/<!--{$result_made.id}--!>" style="color:red;"><!--{$result_made.title}--!></a></b></h1>
+					<!--{$result_made.content|DeleteHtml|msubstr=0,49}--!>
+				</div>
+			</div>
+			<div class="sport_pl clear">
+				<p style="float:left;"><img src="__PUBLIC__/index/images/sport05.png" /></p>
+				<ul>
+					<li style="margin-top:5px;"><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li><span class="sport_name">午志：</span>曼联占得八分之一决赛先机占得八分之...</li>
+					<li style="text-align:right"><a href="###"><img src="__PUBLIC__/index/images/more.gif" /></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="sport_list sport_list05 sport_border02">
+			<h1 class="sport_title02"><span class="sport_more"><a href="__URL__/articlelist/cid/3">更多>></a></span>综合体育</h1>
+			<ul class="sport_news02">
+			<volist name="result_sport" id="rs">
+			    <eq name="i" value="1">
+			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rs.id}--!>" target="_blank"><!--{$rs.title}--!></a></li>
+			    <else/>
+			    <li><a href="__URL__/articleinfo/id/<!--{$rs.id}--!>" target="_blank"><!--{$rs.title}--!></a></li>
+			    </eq>
+			  </volist>
+			</ul>
+		</div>
+		<div class="sport_list sport_list06 sport_border02">
+			<h1 class="sport_title02"><span class="sport_more"><a href="__URL__/articlelist/cid/4">更多>></a></span>体坛花絮</h1>
+			<ul class="sport_news" style="padding-top:19px;padding-bottom:15px;">
+				<volist name="result_fun" id="rf">
+			    <eq name="i" value="1">
+			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rf.id}--!>" target="_blank"><!--{$rf.title}--!></a></li>
+			    <else/>
+			    <li><a href="__URL__/articleinfo/id/<!--{$rf.id}--!>" target="_blank"><!--{$rf.title}--!></a></li>
+			    </eq>
+			  </volist>
+			</ul>
+		</div>
+	</div>
+	<div class="sport_banner"><img src="__PUBLIC__/index/images/sport_08.jpg" width="988" height="113" /></div>
+	<div class="sport03">
+		<div class="sport_list sport_list07 sport_border02" style="padding-bottom:6px;">
+			<h1 class="sport_title03"><span class="sport_more">更多>></span>热点视图</h1>
+			<div class="sport_hotpic">
+				<img src="__PUBLIC__/index/images/img_15.jpg" />
+				<p>超模"带"你去晨跑</p>
+			</div>
+			<ul class="sport_pics">
+				<li class="sport_pics_first">
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02"/>
+					<p>超模教你打造模特身材</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02" />
+					<p>超模教你打造身材</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02"/>
+					<p>超模教你打造身材</p>
+				</li>
+			</ul>
+			<ul class="sport_pics" style="margin-top:25px;">
+				<li class="sport_pics_first">
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02"/>
+					<p>超模教你打造身材</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02"/>
+					<p>超模教你打造身材</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/img_16.jpg" class="sport_border02"/>
+					<p>超模教你打造身材</p>
+				</li>
+			</ul>
+		</div>
+		<div class="sport_list sport_list06 sport_banner02"><img src="__PUBLIC__/index/images/list_02.png" width="261" height="399" /></div>
+	</div>
+	<div class="sport04">
+		<div class="sport_list sport_list07 sport_border02" style="padding-bottom:40px;*padding-bottom:43px;">
+			<h1 class="sport_title03"><span class="sport_more">更多>></span>泉视频</h1>
+			<ul class="sport_video">
+				<li class="sport_pics_first">
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+			</ul>
+			<ul class="sport_video">
+				<li class="sport_pics_first">
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+				<li>
+					<img src="__PUBLIC__/index/images/sport_03.png" class="sport_border02" />
+					<img src="__PUBLIC__/index/images/play_btn.png" class="sport_video_play" />
+					<p class="sport_video_text">TTTTT</p>
+				</li>
+			</ul>
+		</div>
+		<div class="sport_list sport_list06 sport_border02">
+			<h1 class="sport_title02"><span class="sport_more"><a href="__ROOT__/notice/lists">更多>></a></span>公告/预告</h1>
+			<ul class="sport_news03">
+				<volist name="result_notice" id="rn">
+				<eq name="i" value="1">
+				<li class="sport_news_first"><a href="__ROOT__/notice/info/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></li>
+				<else/>
+				<li><a href="__ROOT__/notice/info/id/<!--{$rn.id}--!>"><!--{$rn.title}--!></li>
+				</eq>
+				</volist>
+			</ul>
+		</div>
+	</div>
+	<div class="sport_banner03"><img src="__PUBLIC__/index/images/list_ad.png" width="990" height="100" alt="" /></div>
+	<div class="clear"></div>
+	<include file="Index:footer" />
+
+</div>

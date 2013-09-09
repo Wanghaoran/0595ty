@@ -114,4 +114,19 @@ class PublicAction extends Action {
     $this -> success(L('LOGOUT_SUCCESS'), U(C('USER_AUTH_GATEWAY')));
   }
 
+  public function pic_upload(){
+    import('ORG.Net.UploadFile');
+    $upload = new UpLoadFile();
+    $upload -> savePath = './Upload/';
+    $upload -> autoSub = true;//设置使用子目录保存上传文件
+    $upload -> subType = 'date';
+    $upload -> saveRule = 'uniqid';
+    if($upload -> upload()){
+      $info = $upload -> getUploadFileInfo();
+      return $info;
+    }else{
+      return false;
+    }
+  }
+
 }

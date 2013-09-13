@@ -60,7 +60,7 @@ $(function(){
 	<div class="list_left">
 	  <p class="listdet_title">当前位置：<!--{$result.ocname}--!> > <a href="__URL__/articlelist/cid/<!--{$result.cid}--!>"><!--{$result.tcname}--!></a> > <span><!--{$result.title}--!></span></p>
 		<p class="listdet_txt_tit"><!--{$result.title}--!></p>
-		<p class="listdet_txt_tittimer">更新时间：<!--{$result.addtime|date="Y-m-d H:i:s", ###}--!>&nbsp;&nbsp;&nbsp;&nbsp;点击量:<!--{$result.clickcount}--!></p>
+		<p class="listdet_txt_tittimer">来源:<!--{$result.source|default='无'}--!>&nbsp;&nbsp;&nbsp;作者:<!--{$result.author|default='无'}--!>&nbsp;&nbsp;&nbsp;更新时间：<!--{$result.addtime|date="Y-m-d H:i:s", ###}--!>&nbsp;&nbsp;&nbsp;点击量:<!--{$result.clickcount}--!></p>
 		<p class="listdet_line"></p>
 		<div style="overflow:hidden;width:100%;">
 		<!--{$result.content|stripslashes}--!>
@@ -180,8 +180,11 @@ $(function(){
 			    <else/>
 			    <td><span class="twos"><!--{$i}--!></span></td>
 			    </elt>
-				
+				<notempty name="rc.link">
+				<td width="173"><a href="<!--{$rc.link}--!>" target="_blank"><!--{$rc.title}--!></a></td>
+				<else/>
 				<td width="173"><a href="__ROOT__/news/articleinfo/id/<!--{$rc.id}--!>" target="_blank"><!--{$rc.title}--!></a></td>
+				</notempty>
 				<td class="nums"><!--{$rc.clickcount}--!></td>
 			  </tr>
 			  </volist>

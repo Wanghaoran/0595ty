@@ -64,7 +64,7 @@ class CommonAction extends Action {
         $this -> error(L('DATA_UPDATE_ERROR'));
       }
     }
-    $result = $Article -> field('title,content,ishot,isbold,isslide') -> find($this -> _get('id', 'intval'));
+    $result = $Article -> field('title,content,ishot,isbold,isslide,author,source,link') -> find($this -> _get('id', 'intval'));
     $this -> assign('result', $result);
     $this -> display();
   }

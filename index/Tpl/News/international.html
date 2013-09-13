@@ -52,9 +52,17 @@
 			<ul class="sport_news sport_border01">
 				<volist name="result_basketball" id="rb">
 			    <eq name="i" value="1">
+			    <notempty name="rb.link">
+			    <li class="sport_news_first"><a href="<!--{$rb.link}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    <else/>
 			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rb.link">
+			    <li><a href="<!--{$rb.link}--!>" target="_blank"><!--{$rb.title}--!></a></li>
 			    <else/>
 			    <li><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    </notempty>
 			    </eq>
 			  </volist>
 			</ul>
@@ -64,9 +72,17 @@
 			<ul class="sport_news sport_border01">
 				<volist name="result_ball" id="rb">
 			    <eq name="i" value="1">
+			    <notempty name="rb.link">
+			    <li class="sport_news_first"><a href="<!--{$rb.link}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    <else/>
 			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rb.link">
+			    <li><a href="<!--{$rb.link}--!>" target="_blank"><!--{$rb.title}--!></a></li>
 			    <else/>
 			    <li><a href="__URL__/articleinfo/id/<!--{$rb.id}--!>" target="_blank"><!--{$rb.title}--!></a></li>
+			    </notempty>
 			    </eq>
 			  </volist>
 			</ul>
@@ -78,7 +94,11 @@
 				<h1 class="sport_title02"><span class="sport_more"><a href="__URL__/articlelist/cid/5">更多>></a></span>泉州制造</h1>
 				<p class="sport_zhizao01"><img src="__ROOT__/Upload/<!--{$result_made.pic}--!>" width="84" class="sport_border02" /></p>
 				<div class="sport_zhizao02">
+					<notempty name="result_made.link">
+					<h1 class="sport_hot"><b><a href="<!--{$result_made.link}--!>" style="color:red;"><!--{$result_made.title}--!></a></b></h1>
+					<else/>
 					<h1 class="sport_hot"><b><a href="__ROOT__/news/articleinfo/id/<!--{$result_made.id}--!>" style="color:red;"><!--{$result_made.title}--!></a></b></h1>
+					</notempty>
 					<!--{$result_made.content|DeleteHtml|msubstr=0,49}--!>
 				</div>
 			</div>
@@ -100,9 +120,17 @@
 			<ul class="sport_news02">
 				<volist name="result_sport" id="rs">
 			    <eq name="i" value="1">
+			    <notempty name="rs.link">
+			    <li class="sport_news_first"><a href="<!--{$rs.link}--!>" target="_blank"><!--{$rs.title}--!></a></li>
+			    <else/>
 			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rs.id}--!>" target="_blank"><!--{$rs.title}--!></a></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rs.link">
+			    <li><a href="<!--{$rs.link}--!>" target="_blank"><!--{$rs.title}--!></a></li>
 			    <else/>
 			    <li><a href="__URL__/articleinfo/id/<!--{$rs.id}--!>" target="_blank"><!--{$rs.title}--!></a></li>
+			    </notempty>
 			    </eq>
 			  </volist>
 			</ul>
@@ -112,9 +140,17 @@
 			<ul class="sport_news" style="padding-top:19px;padding-bottom:15px;">
 				<volist name="result_fun" id="rf">
 			    <eq name="i" value="1">
+			    <notempty name="rf.link">
+			    <li class="sport_news_first"><a href="<!--{$rf.link}--!>" target="_blank"><!--{$rf.title}--!></a></li>
+			    <else/>
 			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rf.id}--!>" target="_blank"><!--{$rf.title}--!></a></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rf.link">
+			    <li><a href="<!--{$rf.link}--!>" target="_blank"><!--{$rf.title}--!></a></li>
 			    <else/>
 			    <li><a href="__URL__/articleinfo/id/<!--{$rf.id}--!>" target="_blank"><!--{$rf.title}--!></a></li>
+			    </notempty>
 			    </eq>
 			  </volist>
 			</ul>

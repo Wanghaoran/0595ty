@@ -67,7 +67,11 @@ $(function(){
 		<div class="sczx_txt" style="font-size:14px;">
 		<ul>
 		  <volist name="result_fun" id="rf">
+		  <notempty name="rf.link">
+		  <li><a href="<!--{$rf.link}--!>"><!--{$rf.title}--!></a></li>
+		  <else/>
 		  <li><a href="__URL__/articleinfo/id/<!--{$rf.id}--!>"><!--{$rf.title}--!></a></li>
+		  </notempty>
 		  </volist>
 		</ul>
 		</div>

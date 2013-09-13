@@ -49,7 +49,11 @@
 					<ul class="cf">
 					  <volist name="result_slide" id="rs">
 						<li>
+						<notempty name="rs.link">
+						<a href="<!--{$rs.link}--!>" target="_blank"><img  width="571" height="293" src="__ROOT__/Upload/<!--{$rs.pic}--!>" alt="" /></a>
+						<else/>
 						<a href="__ROOT__/news/articleinfo/id/<!--{$rs.id}--!>" target="_blank"><img  width="571" height="293" src="__ROOT__/Upload/<!--{$rs.pic}--!>" alt="" /></a>
+						</notempty>
 							<span><!--{$rs.title}--!></span>
 						</li>
 						</volist>
@@ -75,11 +79,18 @@
 			<ul>
 			  <volist name="result_hot" id="rh">
 			    <eq name="rh.isbold" value="1">
+			    <notempty name="rh.link">
+			    <li><span><a href="<!--{$rh.link}--!>" target="_blank"><!--{$rh.title}--!></a></span></li>
+			    <else/>
 			    <li><span><a href="__ROOT__/news/articleinfo/id/<!--{$rh.id}--!>" target="_blank"><!--{$rh.title}--!></a></span></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rh.link">
+			    <li><a href="<!--{$rh.link}--!>" target="_blank"><!--{$rh.title}--!></a></li>
 			    <else/>
 			    <li><a href="__ROOT__/news/articleinfo/id/<!--{$rh.id}--!>" target="_blank"><!--{$rh.title}--!></a></li>
+			    </notempty>
 			    </eq>
-			  
 			  </volist>
 			</ul>
 			</div>
@@ -193,9 +204,17 @@
 		<ul>
 		<volist name="result_news" id="rn">
 			    <eq name="i" value="1">
+			    <notempty name="rn.link">
+			    <li class="sport_news_first"><a href="<!--{$rn.link}--!>" target="_blank"><!--{$rn.title}--!></a></li>
+			    <else/>
 			    <li class="sport_news_first"><a href="__URL__/articleinfo/id/<!--{$rn.id}--!>" target="_blank"><!--{$rn.title}--!></a></li>
+			    </notempty>
+			    <else/>
+			    <notempty name="rn.link">
+			    <li><a href="<!--{$rn.link}--!>" target="_blank"><!--{$rn.title}--!></a></li>
 			    <else/>
 			    <li><a href="__URL__/articleinfo/id/<!--{$rn.id}--!>" target="_blank"><!--{$rn.title}--!></a></li>
+			    </notempty>
 			    </eq>
 			  </volist>
 		</ul>

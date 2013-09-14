@@ -1,0 +1,52 @@
+
+<div class="panel">
+  <h1>图片水印设置</h1>
+  <div class="pageFormContent" layoutH="56">
+    <form method="post" action="__ACTION__/navTabId/imagewater" enctype="multipart/form-data" class="pageForm required-validate" onsubmit="return iframeCallback(this, navTabAjaxDone)">
+      <p style="width:95%;">
+      <label style="width:100%;">填写说明：水印图片和水印内容同时存在时，优先使用水印图片</label>
+      </p>
+      <div class="divider"></div>
+      <p style="width:90%;">
+      <label>是否添加水印：</label>
+      <eq name="iswater" value="1">
+      <input type="radio" name="iswater" value="1" checked />是
+      <input type="radio" name="iswater" value="0" />否
+      <else/>
+      <input type="radio" name="iswater" value="1" />是
+      <input type="radio" name="iswater" value="0" checked />否
+      </eq>
+      </p>
+      <p style="width:90%;">
+      <label>水印内容</label>
+      <input type="text" name="content" size="30" value="<!--{$content}--!>" />
+      </p>
+      <p style="width:70%;">
+      <label>水印图片</label>
+      <input type="file" name="pic" />
+      <notempty name="pic">
+      <a href="__ROOT__/Upload/<!--{$pic}--!>" target="_blank">查看当前水印图片</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="__URL__/delwater/navTabId/imagewater" target="ajaxTodo">删除当前水印图片</a>
+      </notempty>
+      </p>
+      <p style="width:90%;">
+      <label>水印位置：</label>
+      <eq name="position" value="1">
+      <input type="radio" name="position" value="1" checked />左上角
+      <input type="radio" name="position" value="2" />右下角
+      <else/>
+      <input type="radio" name="position" value="1" />左上角
+      <input type="radio" name="position" value="2" checked />右下角
+      </eq>
+      </p>
+      
+      <div class="formBar">
+	<ul>
+	  <li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+	  <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+	</ul>
+      </div>
+    </form>
+
+  </div>
+</div>

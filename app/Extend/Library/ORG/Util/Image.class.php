@@ -339,9 +339,10 @@ class Image {
         $borderColor = imagecolorallocate($im, 100, 100, 100);                    //边框色
         $pointColor = imagecolorallocate($im, mt_rand(0, 255), mt_rand(0, 255), mt_rand(0, 255));                 //点颜色
 
+	$fontcolor = imagecolorallocate($im, mt_rand(0, 120), mt_rand(0, 120), mt_rand(0, 120));
         @imagefilledrectangle($im, 0, 0, $width - 1, $height - 1, $backColor);
         @imagerectangle($im, 0, 0, $width - 1, $height - 1, $borderColor);
-        @imagestring($im, 5, 5, 3, $string, $color);
+	@imagestring($im, 5, 5, 3, $string, $color);
         if (!empty($disturb)) {
             // 添加干扰
             if ($disturb = 1 || $disturb = 3) {

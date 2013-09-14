@@ -68,4 +68,33 @@ class SystemAction extends CommonAction {
     $this -> display();
   }
 
+  //图片水印设置
+  public function imagewater(){
+    $ImagewaterSetting = M('ImagewaterSetting');
+    if(!empty($_POST['content'])){
+      foreach($_POST as $key => $value){
+	$ImagewaterSetting -> where(array('name' => $key)) -> save(array('content' => $value));
+      }
+      if($_FILES['pic']['size'] != 0){
+	$info = R('Public/pic_upload');
+	$ImagewaterSetting -> where(array('name' => 'pic')) -> save(array('content' => $info[0]['savename']));
+      }
+      $this -> success(L('DATA_UPDATE_SUCCESS'));
+    }
+    $result['iswater'] = $ImagewaterSetting -> getFieldByname('iswater', 'content');
+    $result['content'] = $ImagewaterSetting -> getFieldByname('content', 'content');
+    $result['position'] = $ImagewaterSetting -> getFieldByname('position', 'content');
+    $result['pic'] = $ImagewaterSetting -> getFieldByname('pic', 'content');
+    $this -> assign($result);
+    $this -> display();
+  }
+
+  //删除水印图片
+  public function delwater(){
+    if(M('ImagewaterSetting') -> where(array('name' => 'pic')) -> save(array('content' => NULL))){
+      $this -> success(L('DATA_UPDATE_SUCCESS'));
+    }else{
+      $this -> error(L('DATA_UPDATE_ERROR'));
+    }
+  }
 }

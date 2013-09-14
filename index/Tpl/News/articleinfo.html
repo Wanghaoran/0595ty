@@ -65,6 +65,18 @@ $(function(){
 		<div style="overflow:hidden;width:100%;">
 		<!--{$result.content|stripslashes}--!>
 		</div>
+		<div style="margin:30px 30px;">
+		<notempty name="prev_id">
+		<span style="float:left"><a href="__ROOT__/news/articleinfo/id/<!--{$prev_id}--!>">上一篇</a></span>
+		<else/>
+		<span style="float:left">没有了</span>
+		</notempty>
+		<notempty name="next_id">
+		<span style="float:right"><a href="__ROOT__/news/articleinfo/id/<!--{$next_id}--!>">下一篇</a></span>
+		<else/>
+		<span style="float:right">没有了</span>
+		</notempty>
+		</div>
 
 
 		<div class="clear"></div>

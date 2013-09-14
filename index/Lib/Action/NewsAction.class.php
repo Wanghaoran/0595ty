@@ -87,6 +87,18 @@ class NewsAction extends CommonAction {
     $where_click['addtime'] = array('EGT', time() - 60 * 60 * 24 * 7);
     $result_clicksort = $Article -> field('id,title,clickcount,link') -> order('clickcount DESC') -> where($where_click) -> limit(10) -> select();
     $this -> assign('result_clicksort', $result_clicksort);
+    //prev artilce
+    $where_prev = array();
+    $where_prev['id'] = array('LT', $this -> _get('id', 'intval'));
+    $where_prev['cid'] = $result['cid'];
+    $prev_id = $Article -> where($where_prev) -> order('id DESC') -> getField('id');
+    $this -> assign('prev_id', $prev_id);
+    //next article
+    $where_article = array();
+    $where_article['id'] = array('GT', $this -> _get('id', 'intval'));
+    $where_article['cid'] = $result['cid'];
+    $next_id = $Article -> where($where_article) -> order('id ASC') -> getField('id');
+    $this -> assign('next_id', $next_id);
     $this -> display();
   }
 }

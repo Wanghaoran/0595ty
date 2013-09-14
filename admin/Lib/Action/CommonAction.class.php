@@ -10,6 +10,7 @@ class CommonAction extends Action {
   public function addarticle(){
     if(!empty($_POST['title'])){
       $Article = D('Article');
+      
       if(!$Article -> create()){
 	$this -> error($Article -> getError());
       }
@@ -17,12 +18,21 @@ class CommonAction extends Action {
 	$info = R('Public/pic_upload');
 	$Article -> pic = $info[0]['savename']; 
       }
-      if($Article -> add()){
+      if($aid = $Article -> add()){
+	$ArticlePic = D('ArticlePic');
+	$ArticlePic -> getPic($_POST['content'], $aid);
+	if($_POST['iswater'] == 1){
+	  $ArticlePic -> water($aid);
+	}
 	$this -> success(L('DATA_ADD_SUCCESS'));
       }else{
 	$this -> error(L('DATA_ADD_ERROR'));
       }
     }
+    //imagewater
+    $ImagewaterSetting = M('ImagewaterSetting');
+    $iswater = $ImagewaterSetting -> getFieldByname('iswater', 'content');
+    $this -> assign('iswater', $iswater);
     $this -> display();
   }
 
